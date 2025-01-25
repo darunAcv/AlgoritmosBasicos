@@ -1,4 +1,4 @@
-
+package clases;
 
 	/*Los comentarios son para métodos que me costó hacer o llegar a dicha solución, 
 	 * en estos me apoyé de compañeros e internet, tratando de limitarme por lo 
@@ -19,9 +19,31 @@ public class Algoritmos {
 		return es;
 	}
 	
-	//este no logré hacerlo funcionar :-(
+	
 	public static boolean esPrimo(int numero) {
-		boolean es;
+		if(numero <= 1){
+			System.out.println("El número "+numero+" es negativo");
+			return false;
+		}
+
+		if(numero == 2){
+			System.out.println("El número "+numero+" es 2");
+			return true;
+	
+		}
+		
+		for(int i = 2; i <= numero / 2; i++ ){
+			if(numero % i == 0){
+				System.out.println("El número "+numero+" no es número primo.");
+				return false;
+			}
+		}
+		
+		System.out.println("El número "+numero+" es número primo.");
+		return true;
+	}
+
+/* 		boolean es;
 		
 		if (numero % numero == 0 && numero % 1 == 0) {
 			es = true;
@@ -30,8 +52,8 @@ public class Algoritmos {
 			es = false;
 			System.out.println("El número "+numero+" no es número primo.");
 		}
-		return es;
-	}
+		return es;*/
+	
 	
 	public static String stringEnReversa(String reversa) {
 		
